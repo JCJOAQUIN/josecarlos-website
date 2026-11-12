@@ -1,3 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap');
+
 @import "tailwindcss";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+@theme {
+  /* Paleta de colores oficial de Project NOVA */
+  --color-nova-primary: #004080;
+  --color-nova-primary-hover: #003366;
+  --color-nova-secondary: #007bff;
+  --color-nova-secondary-hover: #0056b3;
+  --color-nova-title: #343a40;
+  --color-nova-text: #6c757d;
+  --color-nova-background: #f8f9fa;
+  --color-nova-card: #ebf2fa;
+  --color-nova-border: #d0e1f9;
+
+  /* Tipografías del sistema de diseño */
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Bordes */
+  --radius-nova-btn: 0.375rem;
+  --radius-nova-card: 0.5rem;
+  --radius-nova-badge: 9999px;
+
+  /* Sombras */
+  --shadow-nova-card:
+    0 4px 6px -1px rgba(0, 64, 128, 0.05),
+    0 2px 4px -2px rgba(0, 64, 128, 0.05);
+
+  --shadow-nova-card-hover:
+    0 10px 15px -3px rgba(0, 64, 128, 0.1),
+    0 4px 6px -4px rgba(0, 64, 128, 0.05);
+}
+
+/* Reglas globales */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-nova-text);
+    background-color: var(--color-nova-background);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-nova-title);
+  }
+}
